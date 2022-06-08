@@ -13,12 +13,11 @@ services:
         PHP_IDE_CONFIG: "serverName=appserver"
 
 tooling:
-  # Make build-common-repo.sh available through Lando.
   # Example: lando build
   convert:
     service: appserver
-    description: "Run build-common-repo.sh"
-    cmd: php -f pionex_csv_to_cointracker_csv.php
+    description: "Execute example.php to convert trading.csv and deposit-withdraw.csv to cointracracker.csv."
+    cmd: php -f example.php
   xdebug:
     description: Loads Xdebug in the selected mode
     cmd:
